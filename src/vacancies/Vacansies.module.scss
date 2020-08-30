@@ -1,0 +1,110 @@
+@import "src/sass/extensions";
+@import "src/sass/variables";
+
+%textBlock {
+  background-color: $firstColor;
+  transform: skewX(-25deg);
+  color: $secondColor;
+  padding: 3px;
+  text-align: center;
+  font: 400 18px/1.3 $firstFont;
+  text-shadow: 2px 2px 5px #130101;
+  box-shadow: 2px 2px 7px #130101;
+}
+
+%mediaBlock {
+  width: 98%;
+  border: 5px solid $firstColor;
+  border-radius: 15px;
+  height: 265px;
+  @include flexCenter;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: $secondColor;
+}
+
+.container {
+  @extend %container;
+  @include flexDirection(row);
+  justify-content: space-between;
+  padding: 0;
+  //border: 2px green solid;
+  height: 600px; // delete later
+  position: relative;
+  color: $firstColor;
+}
+
+.leftOffers {
+  width: 13%;
+  //background-color: #c4c172;
+  position: relative;
+
+  &__block {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+
+    & p {
+      @extend %textBlock;
+    }
+  }
+}
+
+.rightOffers {
+  width: 13%;
+
+  &__block {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    text-align: right;
+
+    & p {
+      @extend %textBlock;
+    }
+  }
+}
+
+.vacancy {
+  width: 70%;
+  //background-color: #8acdd2;
+  @include flexDirection(row);
+  justify-content: space-between;
+
+  &__descr {
+    width: 52%;
+    @include flexDirection(column);
+    //border: 2px solid #ae23ab;
+
+    & p {
+      margin: 0;
+      padding: 3px 0;
+      color: $thirdColor;
+    }
+  }
+
+  &__media {
+    //border: 2px solid blue;
+    width: 46%;
+    @include flexDirection(column);
+    justify-content: space-evenly;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  &__photos {
+    @extend %mediaBlock;
+    background-color: $firstColor;
+
+    & img {
+      border-radius: 15px;
+      @include makeWH(396px, 263px);
+    }
+  }
+
+  &__video {
+    @extend %mediaBlock;
+  }
+}

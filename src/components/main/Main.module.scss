@@ -1,0 +1,100 @@
+@import "src/sass/extensions";
+@import "src/sass/variables";
+
+%smallLeft {
+  width: 80%;
+  text-align: left;
+}
+
+%smallRight {
+  width: 80%;
+  text-align: right;
+}
+
+%block {
+  position: absolute;
+  @include flexDirection(column);
+  width: 23%;
+  color: $secondColor;
+  font: 700 16px/1.3 $firstFont;
+  border: 2px $secondColor outset;
+  text-align: justify;
+
+  & p {
+    margin: 0;
+    padding: 0 5px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  background-color: $firstColor;
+  padding: 40px 0;
+}
+
+.container {
+  @extend %container;
+  background-color: $firstColor;
+  @include flexDirection(column);
+  //border: 2px green solid;
+  height: 100vh;
+  padding: 0 20px;
+
+  & h1 {
+    padding-top: -10px;
+    text-align: center;
+    font: 700 34px/1.3 $secondFont;
+    color: $secondColor;
+  }
+}
+
+.advertBlock {
+  background: url("../../assets/images/office.jpg") center/cover no-repeat;
+  height: 100%;
+  position: relative;
+  //opacity: 0.9;
+
+  &__left {
+    @extend %block;
+    top: 35px;
+    left: 35px;
+
+    &_small {
+      @extend %smallLeft;
+    }
+  }
+
+  &__leftDown {
+    @extend %block;
+    bottom: 35px;
+    left: 35px;
+
+    &_small {
+      @extend %smallLeft;
+    }
+  }
+
+  &__right {
+    @extend %block;
+    top: 35px;
+    right: 35px;
+
+    &_small {
+      @extend %smallRight;
+      position: relative;
+      left: 45px;
+    }
+  }
+
+  &__rightDown {
+    @extend %block;
+    bottom: 35px;
+    right: 35px;
+
+    &_small {
+      @extend %smallRight;
+      position: relative;
+      left: 45px;
+    }
+  }
+}
