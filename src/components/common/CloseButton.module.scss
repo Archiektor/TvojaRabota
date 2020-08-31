@@ -1,0 +1,71 @@
+@import "src/sass/extensions";
+@import "src/sass/variables";
+
+%leftPartOfIcon {
+  @extend %menuIcon;
+  width: 50%;
+  align-self: flex-start;
+}
+
+.nav {
+  position: relative;
+  &__menuIcon {
+    box-sizing: border-box;
+    @include makeWH(25px, 25px);
+    @include flexCenter;
+    flex-flow: column nowrap;
+    transition: transform .2s ease, background-color .5s ease;
+    top: 20px;
+    position: absolute;
+    right: 100px;
+
+    @include mediaQuery($mobile) {
+      right: 20px;
+    }
+
+    @include mediaQuery($mobileM) {
+      right: 25px;
+    }
+
+    @include mediaQuery($mobileL) {
+      right: 30px;
+    }
+
+    &_left {
+      @extend %leftPartOfIcon;
+
+    }
+
+    &_leftVisible {
+      @extend %leftPartOfIcon;
+      transform: rotate(45deg);
+      width: 35%;
+      border: 2px $secondColor solid;
+    }
+
+    &_mid {
+      @extend %menuIcon;
+    }
+
+    &_midVisible {
+      @extend %menuIcon;
+      transform: rotate(135deg);
+      width: 110%;
+      border: 2px $secondColor solid;
+    }
+
+    &_right {
+      @extend %menuIcon;
+      width: 50%;
+      align-self: flex-end;
+    }
+
+    &_rightVisible {
+      @extend %leftPartOfIcon;
+      align-self: flex-end;
+      transform: rotate(45deg);
+      width: 45%;
+      border: 2px $secondColor solid;
+    }
+  }
+}

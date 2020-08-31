@@ -16,7 +16,7 @@ const Header: React.FC = React.memo(() => {
                     <div className={s.header}>
                         <img className={s.header__logo} src={logo} alt="logo of company Tvoja Rabota"/>
                         <div className={s.header__phones}>
-                            <img className={s.header__phoneIcon} title="Freepik" src={phoneIcon} alt="phone icon"/>
+                            <img className={s.header__phoneIcon} src={phoneIcon} alt="phone icon"/>
                             <div className={s.header__contactPhone}>
                                 {/*  TODO ask Sveta*/}
                                 <a href='tel:+48518111600'>+48 518-111-600</a>

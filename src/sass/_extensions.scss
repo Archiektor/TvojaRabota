@@ -55,3 +55,14 @@
   margin: 0;
   padding: 0;
 }
+
+%absoluteFullBlock {
+  position: absolute;
+  width: 200%;
+  height: 300vh;
+  margin: 0 auto;
+  //top: 0;
+  //bottom: 0;
+  //left: 0;
+  //right: 0;
+}

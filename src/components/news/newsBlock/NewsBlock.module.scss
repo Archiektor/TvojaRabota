@@ -1,37 +1,100 @@
 @import "../../../sass/extensions";
 @import "../../../sass/variables";
 
-
-.container {
-  @include flexDirection(column);
-  align-items: center;
-  position: relative;
-
-  & img {
-    @include makeWH(400px, 267px);
-    transform: skewX(-5deg);
-    border: 8px $firstColor solid;
-  }
-
-  & h3 {
-    font: 700 22px/1.6 $secondFont;
-    @extend %marginToZero;
-    padding: 15px 0;
-  }
-
-  & p {
-    text-align: justify;
-    @extend %marginToZero;
-    padding: 0 30px 30px 30px;
-    font: 700 18px/1.4 $firstFont;
-  }
-
-  & div {
-    position: absolute;
-    bottom: 30px;
+/*@keyframes goRight {
+  from {
     right: 70%;
-    @include makeWH(20px, 20px);
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-    background-color: $firstColor;
+  }
+  to {
+    right: 66%;
+    background-color: $thirdColor;
+  }
+}*/
+
+.wrapper {
+  width: 100%;
+  //position: relative;
+  background-color: $secondColor;
+
+  .container {
+    @include flexDirection(column);
+    align-items: center;
+
+    & img {
+      @include makeWH(400px, 267px);
+      transform: skewX(-5deg);
+      border: 8px $firstColor solid;
+    }
+
+    & h3 {
+      font: 700 22px/1.6 $secondFont;
+      @extend %marginToZero;
+      padding: 15px 0;
+    }
+
+    & p {
+      text-align: justify;
+      @extend %marginToZero;
+      padding: 0 30px 30px 30px;
+      font: 700 18px/1.4 $firstFont;
+    }
+
+    &__btn {
+      @include makeWH(30px, 25px);
+      @include flexCenter;
+      position: relative;
+      bottom: 55px;
+      left: 15%;
+      /*      animation-duration: 3s;
+            animation-name: goRight;
+            animation-iteration-count: 3;
+            animation-direction: alternate;*/
+      transition: left 1.5s ease-in;
+      cursor: pointer;
+
+      &:hover {
+        left: 25%;
+      }
+
+      & div {
+        @include makeWH(20px, 20px);
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        background-color: $firstColor;
+      }
+    }
+
+    &_hide {
+      display: none;
+      //border: 2px greenyellow solid;
+    }
+
+    &_available {
+      padding: 30px;
+      display: block;
+      @include flexDirection(column);
+      align-items: center;
+      background-color: $thirdColor;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 200vh;
+      z-index: 999;
+      color: $secondColor;
+
+      & img {
+        border: 8px $secondColor solid;
+        transform: skewX(0deg);
+      }
+
+      & h3 {
+        padding-top: 45px;
+        font: 500 28px/1.4 $secondFont;
+      }
+
+      & p {
+        padding-top: 15px;
+        width: 90%;
+      }
+    }
   }
 }
