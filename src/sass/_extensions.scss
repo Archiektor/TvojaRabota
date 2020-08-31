@@ -28,10 +28,9 @@
 }
 
 %title {
-  font: 700 32px/1.6 $firstFont;
+  font: 700 28px/1.6 $firstFont;
   text-align: center;
-  margin: 10px 20px;
-  @extend %textColor;
+  color: $firstColor;
 }
 
 %posABtn {
@@ -50,4 +49,9 @@
 
 %textColor {
   color: $firstColor;
+}
+
+%marginToZero {
+  margin: 0;
+  padding: 0;
 }

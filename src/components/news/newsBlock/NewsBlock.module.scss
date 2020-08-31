@@ -1,0 +1,37 @@
+@import "../../../sass/extensions";
+@import "../../../sass/variables";
+
+
+.container {
+  @include flexDirection(column);
+  align-items: center;
+  position: relative;
+
+  & img {
+    @include makeWH(400px, 267px);
+    transform: skewX(-5deg);
+    border: 8px $firstColor solid;
+  }
+
+  & h3 {
+    font: 700 22px/1.6 $secondFont;
+    @extend %marginToZero;
+    padding: 15px 0;
+  }
+
+  & p {
+    text-align: justify;
+    @extend %marginToZero;
+    padding: 0 30px 30px 30px;
+    font: 700 18px/1.4 $firstFont;
+  }
+
+  & div {
+    position: absolute;
+    bottom: 30px;
+    right: 70%;
+    @include makeWH(20px, 20px);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background-color: $firstColor;
+  }
+}

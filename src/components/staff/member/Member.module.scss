@@ -1,0 +1,21 @@
+@import "../../../sass/extensions";
+@import "../../../sass/variables";
+
+.container {
+  @include flexDirection(column);
+  align-items: center;
+  width: 18%;
+  //border: 2px deepskyblue solid;
+
+  & img {
+    @include makeWH(100px, 100px);
+    border: 5px $secondColor solid;
+    border-radius: 50%;
+  }
+
+  & p {
+    font: 400 16px/1.3 $firstFont;
+    color: $secondColor;
+    text-align: center;
+  }
+}

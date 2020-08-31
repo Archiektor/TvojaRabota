@@ -1,0 +1,23 @@
+@import "../../sass/extensions";
+@import "../../sass/variables";
+
+.wrapper {
+  width: 100%;
+  background-color: $firstColor;
+  padding: 50px;
+
+  &__title {
+    margin: 10px auto 40px auto;
+    @extend %title;
+    color: $secondColor;
+  }
+}
+
+.container {
+  @extend %container;
+  @include flexDirection(row);
+  justify-content: space-evenly;
+  padding: 0;
+  //border: 2px green solid;
+  color: $firstColor;
+}

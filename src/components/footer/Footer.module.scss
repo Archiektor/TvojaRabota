@@ -1,0 +1,62 @@
+@import "../../sass/extensions";
+@import "../../sass/variables";
+
+.wrapper {
+  width: 100%;
+  background-color: $firstColor;
+  padding: 50px;
+  position: relative;
+  text-align: center;
+
+  &__auth {
+    width: 200px;
+    //border: 2px whitesmoke solid;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -100px;
+    @extend %marginToZero;
+    color: #211d1d;
+    font: 400 14px $secondFont;
+    opacity: 0.8;
+  }
+}
+
+.container {
+  @extend %container;
+  @include flexDirection(row);
+  padding: 0;
+  //border: 2px green solid;
+  color: $secondColor;
+  position: relative;
+}
+
+.map {
+  @include makeWH(40%, 300px);
+}
+
+.contacts {
+  width: 58%;
+  @include flexDirection(column);
+  align-items: center;
+
+  & img {
+    padding-top: 15px;
+  }
+
+  & h3 {
+    @extend %marginToZero;
+    padding: 25px 10px 10px 10px;
+  }
+
+  & p {
+    @extend %marginToZero;
+    padding-bottom: 5px;
+  }
+  &__social {
+    margin-top: 10px;
+    width: 50%;
+    @include flexDirection(row);
+    justify-content: space-evenly;
+  }
+}
