@@ -50,6 +50,10 @@
     padding: 7px;
   }
 
+  @include mediaQuery($mobileM) {
+    font-size: 14px;
+  }
+
   & p {
     margin: 0;
     padding: 0 5px;
@@ -73,6 +77,10 @@
   //border: 2px green solid;
   height: 100vh;
   padding: 0 20px;
+
+  @include mediaQuery($mobileL) {
+    height: auto;
+  }
 
   & h1 {
     padding-top: -10px;

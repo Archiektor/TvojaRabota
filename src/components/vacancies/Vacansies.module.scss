@@ -16,7 +16,12 @@
 
   @include mediaQuery($mobileL) {
     transform: skewX(0deg);
-    font-size: 16px;
+    font-size: 15px;
+    padding: 1px;
+  }
+
+  @include mediaQuery($mobileM) {
+    font-size: 14px;
   }
 
   &:hover {
@@ -48,6 +53,14 @@
   background-color: $secondColor;
   padding: 50px;
 
+  @include mediaQuery($mobileL) {
+    padding-top: 30px;
+  }
+
+  @include mediaQuery($mobileM) {
+    padding-top: 50px;
+  }
+
   &__title {
     margin: 10px auto 40px auto;
     @extend %title;
@@ -75,7 +88,11 @@
   }
 
   @include mediaQuery($tablet) {
-    height: 1570px;
+    height: 1620px;
+  }
+
+  @include mediaQuery($mobileM) {
+    height: 1635px;
   }
 }
 

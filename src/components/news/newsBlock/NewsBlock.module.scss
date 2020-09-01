@@ -67,6 +67,10 @@
         left: 35%;
       }
 
+      @include mediaQuery($mobileL) {
+        left: 10%;
+      }
+
       &:hover {
         left: 25%;
 
@@ -84,6 +88,10 @@
 
         @include mediaQuery($mobileL) {
           left: 40%;
+        }
+
+        @include mediaQuery($mobileM) {
+          left: 15%;
         }
       }
 
