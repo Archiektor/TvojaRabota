@@ -2,11 +2,14 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import s from './Vacansies.module.scss';
 import welder from '../../assets/images/rsz_3welder.png';
+import {Slide} from 'react-awesome-reveal';
 
 const Vacansies: React.FC = React.memo(() => {
     return (
-        <div className={s.wrapper}>
-            <h2 className={s.wrapper__title}>Вакансии</h2>
+        <div id='vacancies' className={s.wrapper}>
+            <Slide direction={`up`} triggerOnce={true}>
+                <h2 className={s.wrapper__title}>Вакансии</h2>
+            </Slide>
             <div className={s.container}>
                 <div className={s.leftOffers}>
                     <div className={s.leftOffers__block}>

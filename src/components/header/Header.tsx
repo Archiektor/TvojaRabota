@@ -4,12 +4,29 @@ import logo from './../../assets/images/logo.png';
 import menu from './../../assets/icons/menu.svg';
 import phoneIcon from './../../assets/icons/smiley.svg';
 import {useWindowDimensions} from '../common/getWindowDimension/getSizes';
+import {useMousePosition} from '../common/getMousePosition/useMousePosition';
+import {Link} from 'react-scroll/modules';
 
 const Header: React.FC = React.memo(() => {
     const {width} = useWindowDimensions();
     const [isBurger, setIsBurger] = useState(false);
     let burgerStyle = isBurger ? `${s.nav__burger_active}` : `${s.nav__burger}`;
     let menuItemStyle = isBurger ? `${s.nav__item_hidden}` : `${s.nav__item}`;
+
+    let {x, y} = useMousePosition();
+
+    useEffect(() => {
+        if (x! > 175 || y! > 165) {
+            setIsBurger(true);
+        }
+    }, [x, y]);
+
+    /*    const onMouseHandler = (e: MouseEvent<HTMLElement>) => {
+            console.log('into');
+            console.log(e);
+        }*/
+
+    //                    <Link activeClass={s.nav_active} onClick={onClickHandler} className={s.nav__link} to={'main'} spy={true} smooth={true} duration={500}>Main</Link>
 
     useEffect(() => {
         if (width < 650) {
@@ -24,12 +41,19 @@ const Header: React.FC = React.memo(() => {
             <header className={s.container}>
                 <nav className={s.nav}>
                     <img className={burgerStyle} src={menu} alt="menu icon"
-                         onClick={() => setIsBurger(false)}
-                         onBlur={() => setIsBurger(true)}/>
-                    <div className={menuItemStyle}><span>О нас</span></div>
-                    <div className={menuItemStyle}><span>Вакансии</span></div>
-                    <div className={menuItemStyle}><span>Сотрудники</span></div>
-                    <div className={menuItemStyle}><span>Новости</span></div>
+                         onClick={() => setIsBurger(false)}/>
+                    <div className={menuItemStyle}>
+                        <Link activeClass={s.nav_active} to={'main'} spy={true} smooth={true} duration={500}><span>О нас</span></Link>
+                    </div>
+                    <div className={menuItemStyle}>
+                        <Link activeClass={s.nav_active} to={'vacancies'} spy={true} smooth={true} duration={500}><span>Вакансии</span></Link>
+                    </div>
+                    <div className={menuItemStyle}>
+                        <Link activeClass={s.nav_active} to={'staff'} spy={true} smooth={true} duration={500}><span>Сотрудники</span></Link>
+                    </div>
+                    <div className={menuItemStyle}>
+                        <Link activeClass={s.nav_active} to={'news'} spy={true} smooth={true} duration={500}><span>Новости</span></Link>
+                    </div>
                 </nav>
                 <div className={s.header}>
                     <img className={s.header__logo} src={logo} alt="logo of company Tvoja Rabota"/>

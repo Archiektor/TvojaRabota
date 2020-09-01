@@ -44,6 +44,10 @@
     @include flexDirection(column);
   }
 
+  &_active {
+    opacity: 0.5;
+  }
+
   &__burger {
     display: none;
 

@@ -1,11 +1,14 @@
 import React from 'react';
 import s from './Main.module.scss';
+import {Slide} from 'react-awesome-reveal';
 
 const Main: React.FC = () => {
     return (
         <div className={s.wrapper}>
-            <section className={s.container}>
-                <h1>Лучшие вакансии для лучших людей</h1>
+            <section id='main' className={s.container}>
+                <Slide direction={`up`} triggerOnce={true}>
+                    <h1>Лучшие вакансии для лучших людей</h1>
+                </Slide>
                 <div className={s.advertBlock}>
                     <div className={s.advertBlock__left}>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque ea eveniet ipsum
