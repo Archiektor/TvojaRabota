@@ -42,7 +42,7 @@
       @include makeWH(30px, 25px);
       @include flexCenter;
       position: relative;
-      bottom: 55px;
+      bottom: 54px;
       left: 15%;
       transition: left 1.5s ease-in;
       cursor: pointer;
@@ -60,7 +60,7 @@
       }
 
       @include mediaQuery($tablet) {
-        left: 10%;
+        left: 35%;
       }
 
       @include mediaQuery($mobileL) {
@@ -68,7 +68,7 @@
       }
 
       @include mediaQuery($mobileL) {
-        left: 10%;
+        left: 35%;
       }
 
       &:hover {

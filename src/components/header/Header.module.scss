@@ -22,10 +22,12 @@
   @include flexDirection(column);
   height: 120px;
   padding: 0;
+  position: relative;
   //border: 2px green solid;
 
   @include mediaQuery($mobileL) {
-    height: 320px;
+    height: auto;
+    padding-bottom: 60px;
   }
 }
 
@@ -40,6 +42,22 @@
   @include mediaQuery($mobileL) {
     margin-top: 10px; // ??? help
     @include flexDirection(column);
+  }
+
+  &__burger {
+    display: none;
+
+    &_active {
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: relative;
+      top: 10px;
+      left: -270px;
+      //border: 2px blue solid;
+      z-index: 555;
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -59,6 +77,10 @@
     height: 45px;
     cursor: pointer;
     transition: top 1s ease-out;
+
+    &_hidden {
+      display: none;
+    }
 
     @include mediaQuery($mobileL) {
       top: 0;
@@ -107,7 +129,7 @@
   }
 
   &__phones {
-    width: 17%;
+    width: 22%;
     padding-right: 20px;
     @include flexDirection(row);
     justify-content: space-evenly;
