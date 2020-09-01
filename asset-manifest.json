@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/TvojaRabota/static/css/main.8b0b8c41.chunk.css",
-    "main.js": "/TvojaRabota/static/js/main.c35ea856.chunk.js",
-    "main.js.map": "/TvojaRabota/static/js/main.c35ea856.chunk.js.map",
+    "main.css": "/TvojaRabota/static/css/main.b851cb8d.chunk.css",
+    "main.js": "/TvojaRabota/static/js/main.40ae0ee4.chunk.js",
+    "main.js.map": "/TvojaRabota/static/js/main.40ae0ee4.chunk.js.map",
     "runtime-main.js": "/TvojaRabota/static/js/runtime-main.13b299af.js",
     "runtime-main.js.map": "/TvojaRabota/static/js/runtime-main.13b299af.js.map",
-    "static/js/2.392385b8.chunk.js": "/TvojaRabota/static/js/2.392385b8.chunk.js",
-    "static/js/2.392385b8.chunk.js.map": "/TvojaRabota/static/js/2.392385b8.chunk.js.map",
+    "static/js/2.9c0ce1fe.chunk.js": "/TvojaRabota/static/js/2.9c0ce1fe.chunk.js",
+    "static/js/2.9c0ce1fe.chunk.js.map": "/TvojaRabota/static/js/2.9c0ce1fe.chunk.js.map",
     "index.html": "/TvojaRabota/index.html",
-    "precache-manifest.ac1765f734de0468423d1f6f71333481.js": "/TvojaRabota/precache-manifest.ac1765f734de0468423d1f6f71333481.js",
+    "precache-manifest.89ebf47cc8b62caa1d3dddb7b5125f02.js": "/TvojaRabota/precache-manifest.89ebf47cc8b62caa1d3dddb7b5125f02.js",
     "service-worker.js": "/TvojaRabota/service-worker.js",
-    "static/css/main.8b0b8c41.chunk.css.map": "/TvojaRabota/static/css/main.8b0b8c41.chunk.css.map",
-    "static/js/2.392385b8.chunk.js.LICENSE.txt": "/TvojaRabota/static/js/2.392385b8.chunk.js.LICENSE.txt",
+    "static/css/main.b851cb8d.chunk.css.map": "/TvojaRabota/static/css/main.b851cb8d.chunk.css.map",
+    "static/js/2.9c0ce1fe.chunk.js.LICENSE.txt": "/TvojaRabota/static/js/2.9c0ce1fe.chunk.js.LICENSE.txt",
     "static/media/anna.jpg": "/TvojaRabota/static/media/anna.3ae1fb12.jpg",
+    "static/media/menu.svg": "/TvojaRabota/static/media/menu.711145f9.svg",
     "static/media/office.jpg": "/TvojaRabota/static/media/office.e074a953.jpg",
     "static/media/rsz_3welder.png": "/TvojaRabota/static/media/rsz_3welder.46dc723c.png",
     "static/media/smiley.svg": "/TvojaRabota/static/media/smiley.dc2b0da3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.13b299af.js",
-    "static/js/2.392385b8.chunk.js",
-    "static/css/main.8b0b8c41.chunk.css",
-    "static/js/main.c35ea856.chunk.js"
+    "static/js/2.9c0ce1fe.chunk.js",
+    "static/css/main.b851cb8d.chunk.css",
+    "static/js/main.40ae0ee4.chunk.js"
   ]
 }
