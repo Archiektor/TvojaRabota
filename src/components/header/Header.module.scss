@@ -23,6 +23,10 @@
   height: 120px;
   padding: 0;
   //border: 2px green solid;
+
+  @include mediaQuery($mobileL) {
+    height: 320px;
+  }
 }
 
 .nav {
@@ -32,6 +36,11 @@
   align-items: flex-end;
   justify-self: flex-start;
   //border: 2px solid black;
+
+  @include mediaQuery($mobileL) {
+    @include flexDirection(column);
+  }
+
   &__item {
     position: relative;
     top: -15px;
@@ -49,6 +58,15 @@
     height: 45px;
     cursor: pointer;
     transition: top 1s  ease-out;
+
+    @include mediaQuery($mobileL) {
+      top: 0;
+      align-self: flex-start;
+      width: 35%;
+      height: 35px;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
 
     &:hover {
       top: -5px;
@@ -69,8 +87,17 @@
   height: 70px;
   //border: 2px solid black;
 
+  @include mediaQuery($mobileL) {
+    margin-top: 15px;
+    @include flexDirection(column);
+  }
+
   &__logo {
     padding-left: 20px;
+
+    @include mediaQuery($mobileL) {
+      padding-left: 0;
+    }
   }
 
   &__phones {
@@ -79,6 +106,25 @@
     @include flexDirection(row);
     justify-content: space-evenly;
     //border: 2px greenyellow solid;
+
+    @include mediaQuery($desktop) {
+      width: 25%;
+    }
+
+    @include mediaQuery($large) {
+      width: 30%;
+    }
+
+    @include mediaQuery($tablet) {
+      width: 38%;
+    }
+
+    @include mediaQuery($tablet) {
+      padding-right: 0;
+      margin-top: 25px;
+      width: 70%;
+      align-self: flex-end;
+    }
   }
 
   &__phoneIcon {

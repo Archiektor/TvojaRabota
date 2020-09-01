@@ -56,8 +56,10 @@ $mobileL: 425px;
 $tablet: 768px;
 $tabletXL: 920px;
 $large: 1024px;
+$largeL: 1100px;
 $smallNote: 1200px;
 $desktop: 1280px;
+$laptopL: 1440px;
 
 @mixin mediaQuery($resolution) {
   @media only screen and (max-width: $resolution) {

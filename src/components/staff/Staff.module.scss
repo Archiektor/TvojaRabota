@@ -20,4 +20,10 @@
   padding: 0;
   //border: 2px green solid;
   color: $firstColor;
+
+  @include mediaQuery($large) {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
 }

@@ -24,4 +24,13 @@
   align-items: stretch;
   padding: 0;
   color: $firstColor;
+
+  @include mediaQuery($mobileL) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
 }

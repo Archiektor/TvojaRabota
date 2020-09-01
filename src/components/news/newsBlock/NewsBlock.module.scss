@@ -1,16 +1,6 @@
 @import "../../../sass/extensions";
 @import "../../../sass/variables";
 
-/*@keyframes goRight {
-  from {
-    right: 70%;
-  }
-  to {
-    right: 66%;
-    background-color: $thirdColor;
-  }
-}*/
-
 .wrapper {
   width: 100%;
   //position: relative;
@@ -24,6 +14,11 @@
       @include makeWH(400px, 267px);
       transform: skewX(-5deg);
       border: 8px $firstColor solid;
+
+      @include mediaQuery($large) {
+        width: 90%;
+        height: 90%;
+      }
     }
 
     & h3 {
@@ -37,6 +32,10 @@
       @extend %marginToZero;
       padding: 0 30px 30px 30px;
       font: 700 18px/1.4 $firstFont;
+
+      @include mediaQuery($laptopL) {
+        font-size: 16px;
+      }
     }
 
     &__btn {
@@ -45,15 +44,47 @@
       position: relative;
       bottom: 55px;
       left: 15%;
-      /*      animation-duration: 3s;
-            animation-name: goRight;
-            animation-iteration-count: 3;
-            animation-direction: alternate;*/
       transition: left 1.5s ease-in;
       cursor: pointer;
 
+      @include mediaQuery($largeL) {
+        left: 35%;
+      }
+
+      @include mediaQuery($large) {
+        left: 10%;
+      }
+
+      @include mediaQuery($tabletXL) {
+        left: 35%;
+      }
+
+      @include mediaQuery($tablet) {
+        left: 10%;
+      }
+
+      @include mediaQuery($mobileL) {
+        left: 35%;
+      }
+
       &:hover {
         left: 25%;
+
+        @include mediaQuery($largeL) {
+          left: 40%;
+        }
+
+        @include mediaQuery($large) {
+          left: 15%;
+        }
+
+        @include mediaQuery($tabletXL) {
+          left: 40%;
+        }
+
+        @include mediaQuery($mobileL) {
+          left: 40%;
+        }
       }
 
       & div {
@@ -84,6 +115,15 @@
       & img {
         border: 8px $secondColor solid;
         transform: skewX(0deg);
+
+        @include mediaQuery($large) {
+          width: 50%;
+          height: auto;
+        }
+
+        @include mediaQuery($large) {
+          width: 70%;
+        }
       }
 
       & h3 {

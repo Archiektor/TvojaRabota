@@ -20,7 +20,7 @@ const Footer: React.FC = React.memo(() => {
             <div className={s.container}>
                 <div className={s.map}>
                     <YMaps query={{apikey: '9bcc9b1b-caad-4a72-89ee-0972bea69349'}}>
-                        <Map width={'100%'} height={'300px'} defaultState={mapData}>
+                        <Map width={'100%'} height={'100%'} defaultState={mapData}>
                             <GeolocationControl options={{float: 'left'}}/>
                             <RouteButton options={{float: 'right'}}/>
                             <FullscreenControl/>

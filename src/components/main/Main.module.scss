@@ -20,6 +20,36 @@
   border: 2px $secondColor outset;
   text-align: justify;
 
+  @include mediaQuery($desktop) {
+    width: 27%;
+  }
+
+  @include mediaQuery($smallNote) {
+    width: 30%;
+  }
+
+  @include mediaQuery($largeL) {
+    width: 32%;
+  }
+
+  @include mediaQuery($large) {
+    width: 36%;
+  }
+
+  @include mediaQuery($tabletXL) {
+    font-size: 15px;
+  }
+
+  @include mediaQuery($tabletXL) {
+    width: 40%;
+  }
+
+  @include mediaQuery($mobileL) {
+    position: initial;
+    width: 100%;
+    padding: 7px;
+  }
+
   & p {
     margin: 0;
     padding: 0 5px;
@@ -30,6 +60,10 @@
   width: 100%;
   background-color: $firstColor;
   padding: 50px 0;
+
+  @include mediaQuery($tablet) {
+    padding: 25px 0;
+  }
 }
 
 .container {
@@ -42,9 +76,14 @@
 
   & h1 {
     padding-top: -10px;
+    padding-bottom: 35px;
     text-align: center;
     font: 700 34px/1.3 $secondFont;
     color: $secondColor;
+
+    @include mediaQuery($mobileL) {
+      font-size: 28px;
+    }
   }
 }
 
@@ -54,10 +93,25 @@
   position: relative;
   //opacity: 0.9;
 
+  @include mediaQuery($tablet) {
+    height: 80%;
+  }
+
+  @include mediaQuery($mobileL) {
+    background: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+
   &__left {
     @extend %block;
     top: 35px;
     left: 35px;
+    //border: 2px black solid;
 
     &_small {
       @extend %smallLeft;

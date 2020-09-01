@@ -7,10 +7,27 @@
   width: 18%;
   //border: 2px deepskyblue solid;
 
+  @include mediaQuery($large) {
+    width: 80%;
+    padding-bottom: 20px;
+  }
+
   & img {
     @include makeWH(100px, 100px);
     border: 5px $secondColor solid;
     border-radius: 50%;
+
+    @include mediaQuery($smallNote) {
+      @include makeWH(80px, 80px);
+    }
+
+    @include mediaQuery($large) {
+      @include makeWH(100px, 100px);
+    }
+
+    @include mediaQuery($mobileL) {
+      @include makeWH(80px, 80px);
+    }
   }
 
   & p {
@@ -19,6 +36,18 @@
     text-align: center;
     @extend %marginToZero;
     padding: 7px;
+
+    @include mediaQuery($smallNote) {
+      font-size: 15px;
+    }
+
+    @include mediaQuery($large) {
+      font-size: 17px;
+    }
+
+    @include mediaQuery($mobileL) {
+      font-size: 15px;
+    }
 
     &:nth-child(odd) {
       padding-top: 10px;

@@ -29,16 +29,49 @@
   //border: 2px green solid;
   color: $secondColor;
   position: relative;
+
+  @include mediaQuery($tablet) {
+    @include flexDirection(column);
+    align-items: center;
+  }
 }
 
 .map {
   @include makeWH(40%, 300px);
+
+  @include mediaQuery($large) {
+    width: 55%;
+    height: auto;
+  }
+
+  @include mediaQuery($tablet) {
+    width: 100%;
+    height: auto;
+  }
+
+  @include mediaQuery($mobileL) {
+    width: 350px;
+    height: 250px;
+    //border: black 2px solid;
+  }
 }
 
 .contacts {
   width: 58%;
   @include flexDirection(column);
   align-items: center;
+
+  @include mediaQuery($large) {
+    width: 48%;
+  }
+
+  @include mediaQuery($tablet) {
+    margin-top: 20px;
+  }
+
+  @include mediaQuery($mobileL) {
+    width: 100%;
+  }
 
   & img {
     padding-top: 15px;
@@ -53,10 +86,15 @@
     @extend %marginToZero;
     padding-bottom: 5px;
   }
+
   &__social {
     margin-top: 10px;
     width: 50%;
     @include flexDirection(row);
     justify-content: space-evenly;
+
+    @include mediaQuery($tablet) {
+      width: 100%;
+    }
   }
 }
