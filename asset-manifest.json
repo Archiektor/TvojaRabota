@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TvojaRabota/static/css/main.3b4dff5d.chunk.css",
-    "main.js": "/TvojaRabota/static/js/main.fb410142.chunk.js",
-    "main.js.map": "/TvojaRabota/static/js/main.fb410142.chunk.js.map",
+    "main.js": "/TvojaRabota/static/js/main.656bb802.chunk.js",
+    "main.js.map": "/TvojaRabota/static/js/main.656bb802.chunk.js.map",
     "runtime-main.js": "/TvojaRabota/static/js/runtime-main.13b299af.js",
     "runtime-main.js.map": "/TvojaRabota/static/js/runtime-main.13b299af.js.map",
     "static/js/2.c9ba3af4.chunk.js": "/TvojaRabota/static/js/2.c9ba3af4.chunk.js",
     "static/js/2.c9ba3af4.chunk.js.map": "/TvojaRabota/static/js/2.c9ba3af4.chunk.js.map",
     "index.html": "/TvojaRabota/index.html",
-    "precache-manifest.953ee213c1031f4d28bf89bf11c7a76c.js": "/TvojaRabota/precache-manifest.953ee213c1031f4d28bf89bf11c7a76c.js",
+    "precache-manifest.9ef5efa9acc8b3b548a40c3a18c683a9.js": "/TvojaRabota/precache-manifest.9ef5efa9acc8b3b548a40c3a18c683a9.js",
     "service-worker.js": "/TvojaRabota/service-worker.js",
     "static/css/main.3b4dff5d.chunk.css.map": "/TvojaRabota/static/css/main.3b4dff5d.chunk.css.map",
     "static/js/2.c9ba3af4.chunk.js.LICENSE.txt": "/TvojaRabota/static/js/2.c9ba3af4.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.13b299af.js",
     "static/js/2.c9ba3af4.chunk.js",
     "static/css/main.3b4dff5d.chunk.css",
-    "static/js/main.fb410142.chunk.js"
+    "static/js/main.656bb802.chunk.js"
   ]
 }
