@@ -17,9 +17,11 @@ const Header: React.FC = React.memo(() => {
 
     useEffect(() => {
         if (x! > 175 || y! > 165) {
-            setIsBurger(true);
+            if (width < 650) {
+                setIsBurger(true);
+            }
         }
-    }, [x, y]);
+    }, [x, y, width]);
 
     /*    const onMouseHandler = (e: MouseEvent<HTMLElement>) => {
             console.log('into');
@@ -43,16 +45,20 @@ const Header: React.FC = React.memo(() => {
                     <img className={burgerStyle} src={menu} alt="menu icon"
                          onClick={() => setIsBurger(false)}/>
                     <div className={menuItemStyle}>
-                        <Link activeClass={s.nav_active} to={'main'} spy={true} smooth={true} duration={500}><span>О нас</span></Link>
+                        <Link activeClass={s.nav_active} to={'main'} spy={true} smooth={true}
+                              duration={500}><span>О нас</span></Link>
                     </div>
                     <div className={menuItemStyle}>
-                        <Link activeClass={s.nav_active} to={'vacancies'} spy={true} smooth={true} duration={500}><span>Вакансии</span></Link>
+                        <Link activeClass={s.nav_active} to={'vacancies'} spy={true} smooth={true}
+                              duration={500}><span>Вакансии</span></Link>
                     </div>
                     <div className={menuItemStyle}>
-                        <Link activeClass={s.nav_active} to={'staff'} spy={true} smooth={true} duration={500}><span>Сотрудники</span></Link>
+                        <Link activeClass={s.nav_active} to={'staff'} spy={true} smooth={true}
+                              duration={500}><span>Сотрудники</span></Link>
                     </div>
                     <div className={menuItemStyle}>
-                        <Link activeClass={s.nav_active} to={'news'} spy={true} smooth={true} duration={500}><span>Новости</span></Link>
+                        <Link activeClass={s.nav_active} to={'news'} spy={true} smooth={true}
+                              duration={500}><span>Новости</span></Link>
                     </div>
                 </nav>
                 <div className={s.header}>
