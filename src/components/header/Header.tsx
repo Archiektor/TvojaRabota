@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {MouseEvent, useEffect, useState} from 'react';
 import s from './Header.module.scss';
 import logo from './../../assets/images/logo.png';
 import menu from './../../assets/icons/menu.svg';
 import phoneIcon from './../../assets/icons/smiley.svg';
 import {useWindowDimensions} from '../common/getWindowDimension/getSizes';
-import {useMousePosition} from '../common/getMousePosition/useMousePosition';
 import {Link} from 'react-scroll/modules';
 
 const Header: React.FC = React.memo(() => {
@@ -13,22 +12,19 @@ const Header: React.FC = React.memo(() => {
     let burgerStyle = isBurger ? `${s.nav__burger_active}` : `${s.nav__burger}`;
     let menuItemStyle = isBurger ? `${s.nav__item_hidden}` : `${s.nav__item}`;
 
-    let {x, y} = useMousePosition();
+    //let {x, y} = useMousePosition();
 
-    useEffect(() => {
-        if (x! > 175 || y! > 165) {
-            if (width < 650) {
-                setIsBurger(true);
+    /*    useEffect(() => {
+            if (x! > 175 || y! > 165) {
+                if (width < 650) {
+                    setIsBurger(true);
+                }
             }
-        }
-    }, [x, y, width]);
+        }, [x, y, width]);*/
 
-    /*    const onMouseHandler = (e: MouseEvent<HTMLElement>) => {
-            console.log('into');
-            console.log(e);
-        }*/
-
-    //                    <Link activeClass={s.nav_active} onClick={onClickHandler} className={s.nav__link} to={'main'} spy={true} smooth={true} duration={500}>Main</Link>
+    const onMouseOverHandler = (e: MouseEvent<HTMLElement>) => {
+        setIsBurger(true);
+    }
 
     useEffect(() => {
         if (width < 650) {
@@ -41,7 +37,7 @@ const Header: React.FC = React.memo(() => {
     return (
         <div className={s.wrapper}>
             <header className={s.container}>
-                <nav className={s.nav}>
+                <nav className={s.nav}  onMouseLeave={onMouseOverHandler}>
                     <img className={burgerStyle} src={menu} alt="menu icon"
                          onClick={() => setIsBurger(false)}/>
                     <div className={menuItemStyle}>
